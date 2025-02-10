@@ -1,0 +1,85 @@
+# Archivos de MATLAB
+*.asv
+*.mex*
+slprj/
+*.mlobj
+*.mldatx
+codegen/
+*.p
+*.mexw64
+
+# Archivos de Python
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+# Archivos de compilación
+*.o
+*.a
+*.so
+*.exe
+build/
+dist/
+
+# Configuración de Visual Studio Code
+.vscode/
+
+# Archivos de GDrive
+*.ini
+
+# Archivos de LaTeX
+# Archivos temporales y de compilación de LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+*.dvi
+*.ps
+*.pdf
+*.xdv
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.lol
+
+# Archivos de backup o temporales
+*~
+*.bak
+*.sav
+*.tmp
+*.swp
+*.swo
+*.backup
+.DS_Store
+
+# Archivos de compilación específicos de editores
+*.synctex
+*.synctex(busy)
+*.synctex(busy)*
+
+# Archivos de TeXstudio
+*.gz
+*.nav
+*.snm
+*.vrb
