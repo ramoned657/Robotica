@@ -40,7 +40,7 @@ El paquete completo de ROS 2 (Jazzy Jalisco), Gazebo (Ionic) y las herramientas 
 sudo apt update && sudo apt install ros-dev-tools python3-colcon-common-extensions gedit ros-jazzy-desktop lsb-release gnupg gz-harmonic
 ```
 ## Configura el entorno de ROS 2
-Normalmente se tiene que 
+Normalmente se tiene que escribir `source /opt/ros/jazzy/setup.bash` cada vez que se quiera configirar el entorno de ROS, pero puedes añadir lo siguiente para que siempre se inicie.
 ```bash
 echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
 echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
@@ -48,16 +48,10 @@ source ~/.bashrc
 echo "export LIBGL_ALWAYS_SOFTWARE=1"
 echo "export LIBGL_ALWAYS_INDIRECT=0"
 ```
+Si escribes `sb`, se actualizará la terminal, por lo que se recomienda usarlo si se cambia el archivo `.bashrc`, que es la configuración de la terminal.
 ## Terminado
 Para probar que se instalaron los paquetes, ejecuta 
 ```bash
 gz sim
 ```
 Y debe abrirse la interfaz de gazebo
-
-## Errores 
-Si aparecen un montón de errores parecidos a 
-```pgsql
-[libprotobuf ERROR google/protobuf/descriptor_database.cc:121] File already exists in database: gz/msgs/time.proto
-```
-Se pieden corregir con 
