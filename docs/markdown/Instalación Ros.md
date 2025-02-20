@@ -37,7 +37,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-
 ## Instala ROS 2 y Gazebo
 El paquete completo de ROS 2 (Jazzy Jalisco), Gazebo (Ionic) y las herramientas de desarrollo tardarán bastante en instalarse, así que hazlo en un lugar donde tengas tiempo y buen internet.
 ```bash
-sudo apt update && sudo apt install ros-dev-tools python3-colcon-common-extensions gedit ros-jazzy-desktop lsb-release gnupg gz-harmonic
+sudo apt update && sudo apt install ros-dev-tools python3-colcon-common-extensions gedit ros-jazzy-desktop lsb-release gnupg ros-jazzy-ros-gz
 ```
 ## Configura el entorno de ROS 2
 Normalmente se tiene que escribir `source /opt/ros/jazzy/setup.bash` cada vez que se quiera configirar el entorno de ROS, pero puedes añadir lo siguiente para que siempre se inicie.
