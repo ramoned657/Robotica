@@ -1,3 +1,10 @@
+- [Instalación de Ubuntu 24 en WSL](#instalación-de-ubuntu-24-en-wsl)
+- [¿Quieres instalarlo en un lugar diferente al disco C?](#quieres-instalarlo-en-un-lugar-diferente-al-disco-c)
+- [¿Aparece root en vez de tu usuario?](#aparece-root-en-vez-de-tu-usuario)
+  - [1. Crear un nuevo usuario](#1-crear-un-nuevo-usuario)
+  - [2. Configurar el usuario de inicio](#2-configurar-el-usuario-de-inicio)
+  - [3. Configurar usuario predeterminado](#3-configurar-usuario-predeterminado)
+- [¿Aparece el error 0x800701bc y no te permite entrar?](#aparece-el-error-0x800701bc-y-no-te-permite-entrar)
 # Instalación de Ubuntu 24 en WSL
 
 WSL (Windows Subsystem for Linux) permite usar el Kernel de linux dentro de windows, de forma que no tengas que cambiar de sistema operativo y sea mucho menos pesado. 
@@ -36,7 +43,7 @@ Y seleccionando Conectar a WSL mediante distribución. Si nunca lo haz instalado
    * Esto abrirá una terminal de la nueva instancia de Ubuntu 24 donde podrás realizar configuraciones adicionales según tus necesidades.
 # ¿Aparece root en vez de tu usuario?
 
-## **1. Crear un nuevo usuario**
+## 1. Crear un nuevo usuario
 
 Si al iniciar no te pide el usuario o ves que aparece `root` en la terminal, puedes seguir los siguientes pasos (recuerda cambiar `miusuario` por el usuario que creaste cada vez que aparezca).
 1.  Crear un usuario escribiendo dentro de la terminal de Ubuntu:
@@ -74,3 +81,7 @@ wsl --shutdown
 ```
 Vuelve a abrir Ubuntu 24 y verifica el usuario.
 
+# ¿Aparece el error 0x800701bc y no te permite entrar?
+Probablemente se interrumpió la instalación por el internet, lo que corrompió algunos archivos. Para resolverlo, haz lo siguiente: 
+1. Busca en el explorador de Windows la carpeta `%LOCALAPPDATA%\Packages` y borra las carpetas que empiecen con `Canonical`. No importa si no encuentras ninguna.
+2. 
