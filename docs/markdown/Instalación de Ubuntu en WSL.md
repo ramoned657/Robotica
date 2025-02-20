@@ -20,13 +20,14 @@ Y seleccionando Conectar a WSL mediante distribución. Si nunca lo haz instalado
 ![Conectar a WSL](assets/WSL_VSCode.png)
 
 # ¿Quieres instalarlo en un lugar diferente al disco C?
-1. Importa la imagen a WSL2:
+1. Descarga la [imagen de Ubuntu 24.04](https://cloud-images.ubuntu.com/wsl/releases/24.04/current/ubuntu-noble-wsl-amd64-24.04lts.rootfs.tar.gz).
+2. Importa la imagen a WSL2:
    * Abre PowerShell con privilegios de administrador.
    * Ejecuta el siguiente comando, reemplazando `D:\WSL\Ubuntu24` por la ruta donde deseas almacenar la nueva instancia (recuerda crear una nueva carpeta antes) y `C:\ruta\al\archivo\descargado.tar.gz` por la ruta al archivo que descargaste:
     ```powershell
     wsl --import Ubuntu-24 C:\WSL\Ubuntu24 C:\ruta\al\archivo\descargado.tar.gz --version 2
     ```
-2. Inicia la nueva instancia:
+3. Inicia la nueva instancia:
    * Una vez importada, inicia la nueva distribución con:
 
     ```powershell
