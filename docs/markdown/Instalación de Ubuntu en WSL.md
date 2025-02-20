@@ -3,7 +3,7 @@
 WSL (Windows Subsystem for Linux) permite usar el Kernel de linux dentro de windows, de forma que no tengas que cambiar de sistema operativo y sea mucho menos pesado. 
 
 Existen varias formas de instalar Ubuntu. 
-1. Desde la terminal de **PowerShell**. Puedes abrir la aplicación **terminal** en Windows 11 para ello, aunque también se puede descargar desde la Microsoft Store. No es necesario, pero te permite abrir varias pestañas o seleccionar entre todas las terminales instaladas.
+1. Desde la terminal de **PowerShell** con privilegios de administrador. Puedes abrir la aplicación **terminal** en Windows 11 para ello, aunque también se puede descargar desde la Microsoft Store. No es necesario, pero te permite abrir varias pestañas o seleccionar entre todas las terminales instaladas.
 ```powershell
 wsl --install -d Ubuntu-24.04
 ```
@@ -18,6 +18,21 @@ wsl --install -d Ubuntu-24.04
 Y seleccionando Conectar a WSL mediante distribución. Si nunca lo haz instalado, usa conectar a WSL y aparecerá una ventana que pide instalar una distribución, así que selecciona la que dice `Ubuntu 24.04 LTS`.
 
 ![Conectar a WSL](assets/WSL_VSCode.png)
+
+# ¿Quieres instalarlo en un lugar diferente al disco C?
+1. Importa la imagen a WSL2:
+   * Abre PowerShell con privilegios de administrador.
+   * Ejecuta el siguiente comando, reemplazando `D:\WSL\Ubuntu24` por la ruta donde deseas almacenar la nueva instancia (recuerda crear una nueva carpeta antes) y `C:\ruta\al\archivo\descargado.tar.gz` por la ruta al archivo que descargaste:
+    ```powershell
+    wsl --import Ubuntu-24 C:\WSL\Ubuntu24 C:\ruta\al\archivo\descargado.tar.gz --version 2
+    ```
+2. Inicia la nueva instancia:
+   * Una vez importada, inicia la nueva distribución con:
+
+    ```powershell
+    wsl -d Ubuntu-24
+    ```
+   * Esto abrirá una terminal de la nueva instancia de Ubuntu 24 donde podrás realizar configuraciones adicionales según tus necesidades.
 # ¿Aparece root en vez de tu usuario?
 
 ## **1. Crear un nuevo usuario**
