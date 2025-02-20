@@ -5,9 +5,11 @@
   - [2. Configurar el usuario de inicio](#2-configurar-el-usuario-de-inicio)
   - [3. Configurar usuario predeterminado](#3-configurar-usuario-predeterminado)
 - [¿Aparece el error 0x800701bc y no te permite entrar?](#aparece-el-error-0x800701bc-y-no-te-permite-entrar)
+
+Para instalar ROS, ve a [Instalación de ROS y Gazebo](Instalacion-Ros.md)
 # Instalación de Ubuntu 24 en WSL
 
-WSL (Windows Subsystem for Linux) permite usar el Kernel de linux dentro de windows, de forma que no tengas que cambiar de sistema operativo y sea mucho menos pesado. 
+WSL (Windows Subsystem for Linux) permite usar el Kernel de linux dentro de windows, de forma que no tengas que cambiar de sistema operativo y sea mucho menos pesado (Aproximadamente 10 GB en total). 
 
 Existen varias formas de instalar Ubuntu. 
 1. Desde la terminal de **PowerShell** con privilegios de administrador. Puedes abrir la aplicación **terminal** en Windows 11 para ello, aunque también se puede descargar desde la Microsoft Store. No es necesario, pero te permite abrir varias pestañas o seleccionar entre todas las terminales instaladas.
@@ -64,7 +66,7 @@ wsl -d Ubuntu-24.04 --user miusuario
 ```
 * Esto iniciará la sesión con el usuario `miusuario`
 
-1. Comprueba dentro de Ubuntu si se seleccionó correctamente
+2. Comprueba dentro de Ubuntu si se seleccionó correctamente
 ## 3. Configurar usuario predeterminado
 Si después de seguir los pasos anteriores sigue iniciando como **root**, prueba forzar el cambio manualmente editando el archivo `/etc/wsl.conf` **dentro de WSL**. Puedes abrir el explorador de archivos de Windows y abrir la carpeta `\\wsl.localhost\Ubuntu-24.04\etc` o en la terminal de Ubuntu, escribir:
 ```bash
@@ -84,4 +86,16 @@ Vuelve a abrir Ubuntu 24 y verifica el usuario.
 # ¿Aparece el error 0x800701bc y no te permite entrar?
 Probablemente se interrumpió la instalación por el internet, lo que corrompió algunos archivos. Para resolverlo, haz lo siguiente: 
 1. Busca en el explorador de Windows la carpeta `%LOCALAPPDATA%\Packages` y borra las carpetas que empiecen con `Canonical`. No importa si no encuentras ninguna.
-2. 
+2. Ejecuta **PowerShell** como administrador las siguientes lineas:
+    ```powershell
+    dism.exe /online /disable-feature /featurename:Microsoft-Windows-Subsystem-Linux /norestart
+    dism.exe /online /disable-feature /featurename:VirtualMachinePlatform /norestart
+    ```
+3. Reinicia la PC.
+4. Abre **PowerShell** como administrador y ejecuta 
+```powershell
+wsl --install
+```
+5. Vuelve  a [Instalación de Ubuntu 24 en WSL](#instalación-de-ubuntu-24-en-wsl) o a [¿Quieres instalarlo en un lugar diferente al disco C?](#quieres-instalarlo-en-un-lugar-diferente-al-disco-c).
+
+Para instalar ROS, ve a [Instalación de ROS y Gazebo](Instalacion-Ros.md)
