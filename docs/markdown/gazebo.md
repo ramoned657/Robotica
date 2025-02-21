@@ -1,4 +1,4 @@
-# 1. Crear el Workspace de Catkin
+# Crear el Workspace de Catkin
 Si aun no tienes el workspace, puedes crearlo con
 ```bash
 mkdir -p ~/catkin_ws/src
@@ -11,7 +11,7 @@ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-# 2. Crear un Paquete para el Robot
+# Crear un Paquete para el Robot
 Ahora, dentro de src/, creamos un paquete para nuestro robot:
 ```bash
 cd ~/catkin_ws/src

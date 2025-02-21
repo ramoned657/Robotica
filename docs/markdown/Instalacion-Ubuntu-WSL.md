@@ -6,7 +6,7 @@
   - [3. Configurar usuario predeterminado](#3-configurar-usuario-predeterminado)
 - [¿Aparece el error 0x800701bc y no te permite entrar?](#aparece-el-error-0x800701bc-y-no-te-permite-entrar)
 
-Para instalar ROS, ve a [Instalación de ROS y Gazebo](Instalacion-Ros.md)
+-> Para instalar ROS, ve a [Instalación de ROS y Gazebo](Instalacion-Ros.md).
 # Instalación de Ubuntu 24 en WSL
 
 WSL (Windows Subsystem for Linux) permite usar el Kernel de linux dentro de windows, de forma que no tengas que cambiar de sistema operativo y sea mucho menos pesado (Aproximadamente 10 GB en total). 
