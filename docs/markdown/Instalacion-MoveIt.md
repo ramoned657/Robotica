@@ -1,5 +1,5 @@
 <- Para instalar ROS, regresa a [Instalación de ROS y Gazebo](Instalacion-Ros.md)
-- [Move It 2](#move-it-2)
+- [Instalación de Move It 2](#instalación-de-move-it-2)
 - [Instalación](#instalación)
 - [Crea un Workspace de Colcon y descarga los tutoriales](#crea-un-workspace-de-colcon-y-descarga-los-tutoriales)
 - [Compila (build) tu Workspace de Colcon](#compila-build-tu-workspace-de-colcon)
@@ -52,7 +52,7 @@ Es la versión 2 porque usa ROS 2 para funcionar. La última versión de ROS 1, 
     cd ~/ws_moveit
     colcon build --mixin release
     ```
-Si tienes una papa de computadora, usa el siguiente, aunque será bastante más tardado:
+   * Si tienes una papa de computadora, usa el siguiente, aunque será bastante más tardado:
     ```bash
     cd ~/ws_moveit
     MAKEFLAGS="-j4 -l1" colcon build --executor sequential
