@@ -1,11 +1,15 @@
-- [Exportar Robot de SolidWorks a URDF](#exportar-robot-de-solidworks-a-urdf)
+- [Preparación del robot en SolidWorks](#preparación-del-robot-en-solidworks)
   - [SolidWorks: Eje Z vertical](#solidworks-eje-z-vertical)
   - [SolidWorks: Relación de posición](#solidworks-relación-de-posición)
   - [SolidWorks: Ejes de articulaciones](#solidworks-ejes-de-articulaciones)
   - [Solidworks: Puntos](#solidworks-puntos)
   - [SolidWorks: Sistemas de referencia](#solidworks-sistemas-de-referencia)
+  - [Buscar información del robot](#buscar-información-del-robot)
+- [*SolidWorks to URDF Exporter* (sw2urdf)](#solidworks-to-urdf-exporter-sw2urdf)
+  - [Instalación del plugin](#instalación-del-plugin)
+  - [Exportar Robot de SolidWorks a URDF](#exportar-robot-de-solidworks-a-urdf)
 
-# Exportar Robot de SolidWorks a URDF
+# Preparación del robot en SolidWorks
 Para poder hacer nuestro robot en SolidWorks y poder usarlo en ROS con MoveIt, es necesario seguir unos pasos dentro de SolidWorks y no basta símplemente con exportarlo.
 
 ## SolidWorks: Eje Z vertical
@@ -94,3 +98,32 @@ También recuerda visualizar los las piezas y componentes para que sea más fác
 
 ![Sistema de referencia](assets/Sistema_referencia.png)
 
+## Buscar información del robot
+Para que la simulación sea lo más realista, es necesario definir lo siguiente:
+- Material de las piezas en SolidWorks.
+- Fuerza o torque estático (Recomiendo usar el 80% del que viene en la hoja de datos).
+- Rango de distancia o ángulo. En caso de ser un motor a pasos, es un motor continuo, mientras que en un servomotor, suele ser un rango establecido.
+
+# *SolidWorks to URDF Exporter* (sw2urdf)
+Este plugin permite exportar el robot diseñado en SolidWorks a un formato llamado URDF (Unified Robot Description Format) que se usa como estandar en varios softwares de robótica, ROS y Matlab incluidos. Entre las propiedades del robot que genera este plugin, se encuentran los modelos 3D en formato STL con las mallas de polígonos, la masa y el momento de inercia relativa a los sistemas de referencia de cada eslabón, colores, ejes de las articulaciones y tipos de articulación.
+
+## Instalación del plugin 
+
+La información del plugin se encuentra [aquí](http://wiki.ros.org/sw_urdf_exporter). Antes de instalarlo, verifica que tienes instalada la versión más nueva de .NET Framework. Para eso, puedes escribir en el buscador de windows: `features` o `características` según el idioma y debería de aparecer `Turn Windows features on or off` o `Activar o desactivar las características de Windows` y verifica que `.NET Framework 3.5` y .NET Framework 4.8 (o la más nueva) esté activada. En el caso contrario, seleccionala y después de instalarla, probablemente te pedirá que reinicies. En caso de que no la hayas activado, recomiendo también activar `Virtual Machine Platform`.
+
+Una vez comprobado lo anterior, puedes descargar el instalador del plugin [aquí](https://github.com/ros/solidworks_urdf_exporter/releases), seleccionando el archivo `sw2urdfSetup.exe
+`. Dice que es para la versión de SolidWorks 2021, pero debe de funcionar sin problemas con excepción de la selección automática de los ejes. Para la instalación, solo asegúrate de que se encuentre en el directorio correcto.Si tenías abierto SolidWorks, ciérralo y vuélvelo a abrir.
+
+## Exportar Robot de SolidWorks a URDF
+Para usar el plugin, pueden ir a la ventana de comandos de SolidWorks
+
+![Export as URDF](assets/exportURDF.png)
+
+Pueden ver el [video de youtube](https://youtu.be/I08lO_SRBbk?si=zep6F7ch3Sals-qy&t=176), pero algunas cosas diferentes se deben tomar en cuenta:
+Cuando se ponen los sistemas de referencia, en vez de generarlos automáticamente, es necesario que ustedes seleccionen los que crearon.
+
+También, cuando se seleccionan los límites dle robot, no usen los que aparecen ahí; seleccionen los de los motores de ustedes.
+
+[Este](https://github.com/ageofrobotics/import_your_custom_urdf_package_to_ROS-main/blob/2e713d1acf99981a315667f32bbb82ab184ffcfe/Importing_URDF_Package_from_Soloidworks_in_ROS.pdf) es el documento usado para explicarlo, pero se cambiarán algunas cosas. 
+
+También pueden encontrar la lista de reproducción completa [aquí](https://www.youtube.com/playlist?list=PLeEzO_sX5H6TBD6EMGgV-qdhzxPY19m12).
