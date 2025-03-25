@@ -124,6 +124,27 @@ Cuando se ponen los sistemas de referencia, en vez de generarlos automáticament
 
 También, cuando se seleccionan los límites dle robot, no usen los que aparecen ahí; seleccionen los de los motores de ustedes.
 
-[Este](https://github.com/ageofrobotics/import_your_custom_urdf_package_to_ROS-main/blob/2e713d1acf99981a315667f32bbb82ab184ffcfe/Importing_URDF_Package_from_Soloidworks_in_ROS.pdf) es el documento usado para explicarlo, pero se cambiarán algunas cosas. 
+[Este](https://github.com/ageofrobotics/import_your_custom_urdf_package_to_ROS-main/blob/2e713d1acf99981a315667f32bbb82ab184ffcfe/Importing_URDF_Package_from_Soloidworks_in_ROS.pdf) es el documento usado para explicarlo, pero se cambiarán algunas cosas. También pueden encontrar la lista de reproducción completa [aquí](https://www.youtube.com/playlist?list=PLeEzO_sX5H6TBD6EMGgV-qdhzxPY19m12).
 
-También pueden encontrar la lista de reproducción completa [aquí](https://www.youtube.com/playlist?list=PLeEzO_sX5H6TBD6EMGgV-qdhzxPY19m12).
+Al abrir el URDF exporter, aparecerá algo similar a esto, donde explicaré los puntos del 1 al 7.
+
+![URDF exporter base link](assets/URDF_exporter_base_link.png)
+
+1. **Nombre del eslabón**. Puedes dejarlo con el nombre por defecto o usar los siguientes para usar la convención DH: `eslabon_base`, `link_0` o `eslabon_0`.
+2. **Sistema de coordenadas global**. Al importar el robot, usará este como el sistema de coordenadas base del robot, por lo que si lo pones en $Z=0$, debería de estar al ras del suelo si lo configuraste bien. **Nunca lo generes automáticamente ya que no sirve esa función.**
+3. **Seleccionar componentes asociados con el eslabón**. Si solo es una pieza, puedes simplemente seleccionar el cuadro y luego la pieza, pero puedes usar el FeatureManager si son varias. Si son demasiadas, recomiendo crear anteriormente un subensamble con todas las piezas como en el caso del robot de la siguiente imagen.
+
+   ![Subensamble piezas](assets/Subensamble_piezas.png)
+
+4. **Número de eslabones hijo**. Si el siguiente eslabón que se conecta en la cadena cinemática solo se conecta a través de una articulación (como en la mayoría de los manipuladores industriales), solo tendrá un eslabón hijo, pero si es por ejemplo un robot paralelo (como un robot delta), sí tendrá varios eslabones hijos. En el caso de las pinzas, algunos robots tendrán 2 hijos en esta parte.
+
+![Pinzas](assets/Pinzas.png)
+
+5. **Cargar configuración**. Solo sirve una vez se ha exportado el archivo URDF.
+6. **Previzualizar y expportar**. Solo debe hacerse una vez que se configuraron todos los eslabones.
+7. **Navegador de eslabones**. Te permite entrar a la configuración de cada eslabón que vas añadiendo. Una vez hayas puesto toda la información de los eslabones anteriores, selecciona el que dice `Empty_link`.
+
+Al entrar a los siguientes eslabones, aparecerán nuevas opciones relacionadas con las articulaciones.
+
+![URDF exporter link n](assets/URDF_exporter_link_n.png)
+
