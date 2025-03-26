@@ -3,7 +3,7 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="Robot_ERA">
+  name="ERA">
   <link
     name="link_0">
     <inertial>
@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_0.STL" />
+          filename="package://ERA/meshes/link_0.STL" />
       </geometry>
       <material
         name="">
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_0.STL" />
+          filename="package://ERA/meshes/link_0.STL" />
       </geometry>
     </collision>
   </link>
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_1.STL" />
+          filename="package://ERA/meshes/link_1.STL" />
       </geometry>
       <material
         name="">
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_1.STL" />
+          filename="package://ERA/meshes/link_1.STL" />
       </geometry>
     </collision>
   </link>
@@ -88,8 +88,8 @@
     name="joint_1"
     type="revolute">
     <origin
-      xyz="0 0 0.18918"
-      rpy="-1.5708 0 -1.5708" />
+      xyz="0 0 0.189175"
+      rpy="-1.5707963267949 0 -1.57079632679489" />
     <parent
       link="link_0" />
     <child
@@ -99,8 +99,8 @@
     <limit
       lower="-2.3562"
       upper="2.3562"
-      effort="1000"
-      velocity="5" />
+      effort="7.1537"
+      velocity="0.2188" />
     <dynamics
       damping="0"
       friction="0" />
@@ -109,17 +109,17 @@
     name="link_2">
     <inertial>
       <origin
-        xyz="-0.161262686422663 -0.000136692294061287 0.00782963077501263"
+        xyz="-0.161262686422663 -0.000136692294061287 0.00782963077501265"
         rpy="0 0 0" />
       <mass
-        value="2.97737093271591" />
+        value="2.9773709327159" />
       <inertia
-        ixx="0.00395741063536685"
-        ixy="-7.07177065142139E-06"
-        ixz="3.50706079497186E-05"
-        iyy="0.00625338013677876"
+        ixx="0.00395741063536684"
+        ixy="-7.0717706514214E-06"
+        ixz="3.50706079497188E-05"
+        iyy="0.00625338013677875"
         iyz="1.23578595324686E-05"
-        izz="0.00571589927544617" />
+        izz="0.00571589927544615" />
     </inertial>
     <visual>
       <origin
@@ -127,7 +127,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_2.STL" />
+          filename="package://ERA/meshes/link_2.STL" />
       </geometry>
       <material
         name="">
@@ -141,7 +141,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_2.STL" />
+          filename="package://ERA/meshes/link_2.STL" />
       </geometry>
     </collision>
   </link>
@@ -149,8 +149,8 @@
     name="joint_2"
     type="revolute">
     <origin
-      xyz="0.00012374 -0.25568 0.00149"
-      rpy="0 0 -1.5708" />
+      xyz="0.000123744699244387 -0.25567672725 0.00148999999984069"
+      rpy="0 0 -1.5707963267949" />
     <parent
       link="link_1" />
     <child
@@ -160,8 +160,8 @@
     <limit
       lower="-1.5708"
       upper="1.5708"
-      effort="45.1"
-      velocity="0.114" />
+      effort="86.211"
+      velocity="0.1163" />
     <dynamics
       damping="0"
       friction="0" />
@@ -175,9 +175,9 @@
       <mass
         value="1.40082730035319" />
       <inertia
-        ixx="0.00418608582348625"
-        ixy="-9.33789806278586E-06"
-        ixz="2.72602723246539E-05"
+        ixx="0.00418608582348626"
+        ixy="-9.33789806278587E-06"
+        ixz="2.72602723246538E-05"
         iyy="0.00424310951501921"
         iyz="0.000187610491595618"
         izz="0.000494915913062191" />
@@ -188,7 +188,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_3.STL" />
+          filename="package://ERA/meshes/link_3.STL" />
       </geometry>
       <material
         name="">
@@ -202,7 +202,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_3.STL" />
+          filename="package://ERA/meshes/link_3.STL" />
       </geometry>
     </collision>
   </link>
@@ -211,7 +211,7 @@
     type="revolute">
     <origin
       xyz="0 0 0"
-      rpy="-1.5708 0 0" />
+      rpy="-1.5707963267949 0 0" />
     <parent
       link="link_2" />
     <child
@@ -221,8 +221,8 @@
     <limit
       lower="-3.927"
       upper="0.7854"
-      effort="22.7"
-      velocity="0.114" />
+      effort="24.654"
+      velocity="0.0635" />
     <dynamics
       damping="0"
       friction="0" />
@@ -231,16 +231,16 @@
     name="link_4">
     <inertial>
       <origin
-        xyz="7.04690138048081E-06 0.00950257370630442 0.00737940778529238"
+        xyz="7.04690138053632E-06 0.00950257370630442 0.00737940778529239"
         rpy="0 0 0" />
       <mass
         value="0.346752223723456" />
       <inertia
         ixx="0.000135202143666052"
-        ixy="-7.18609035495776E-08"
-        ixz="3.024445323017E-08"
+        ixy="-7.18609035495795E-08"
+        ixz="3.02444532301698E-08"
         iyy="0.00010581833342793"
-        iyz="1.68938256287116E-05"
+        iyz="1.68938256287117E-05"
         izz="0.000173704607483614" />
     </inertial>
     <visual>
@@ -249,7 +249,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_4.STL" />
+          filename="package://ERA/meshes/link_4.STL" />
       </geometry>
       <material
         name="">
@@ -263,7 +263,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_4.STL" />
+          filename="package://ERA/meshes/link_4.STL" />
       </geometry>
     </collision>
   </link>
@@ -271,8 +271,8 @@
     name="joint_4"
     type="revolute">
     <origin
-      xyz="0 0 0.4284"
-      rpy="-1.5708 0 -3.1416" />
+      xyz="0 0 0.428399999999979"
+      rpy="-1.57079632679491 0 -3.1415926535893" />
     <parent
       link="link_3" />
     <child
@@ -282,8 +282,8 @@
     <limit
       lower="-2.3562"
       upper="2.3562"
-      effort="0.5"
-      velocity="8" />
+      effort="15.93"
+      velocity="0.0982" />
     <dynamics
       damping="0"
       friction="0" />
@@ -292,17 +292,17 @@
     name="link_5">
     <inertial>
       <origin
-        xyz="-1.37383912146571E-06 -0.100506212964361 -0.00174871909355217"
+        xyz="-1.3738E-06 -0.10051 -0.0017487"
         rpy="0 0 0" />
       <mass
-        value="0.155635640889723" />
+        value="0.15564" />
       <inertia
-        ixx="0.000134532482619006"
-        ixy="3.98455352347092E-07"
-        ixz="-1.05209048119545E-08"
-        iyy="0.000175202779609289"
-        iyz="-9.07655924945883E-06"
-        izz="0.000104612213676861" />
+        ixx="0.00013453"
+        ixy="3.9846E-07"
+        ixz="-1.0521E-08"
+        iyy="0.0001752"
+        iyz="-9.0766E-06"
+        izz="0.00010461" />
     </inertial>
     <visual>
       <origin
@@ -310,12 +310,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_5.STL" />
+          filename="package://ERA/meshes/link_5.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+          rgba="0.75294 0.75294 0.75294 1" />
       </material>
     </visual>
     <collision>
@@ -324,7 +324,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_5.STL" />
+          filename="package://ERA/meshes/link_5.STL" />
       </geometry>
     </collision>
   </link>
@@ -343,8 +343,8 @@
     <limit
       lower="-3.927"
       upper="0.7854"
-      effort="0.35"
-      velocity="2" />
+      effort="3.5"
+      velocity="7.48" />
     <dynamics
       damping="0"
       friction="0" />
@@ -353,17 +353,17 @@
     name="link_6_1">
     <inertial>
       <origin
-        xyz="8.89994597630395E-07 -0.0287485932369482 0.0151492418636834"
+        xyz="8.8999E-07 -0.028749 0.015149"
         rpy="0 0 0" />
       <mass
-        value="0.01938707412012" />
+        value="0.019387" />
       <inertia
-        ixx="1.6008267590004E-05"
-        ixy="2.87047684569698E-09"
-        ixz="-1.75512776140931E-09"
-        iyy="1.18412371032299E-05"
-        iyz="2.6003521200431E-06"
-        izz="2.53121364320976E-05" />
+        ixx="1.6008E-05"
+        ixy="2.8705E-09"
+        ixz="-1.7551E-09"
+        iyy="1.1841E-05"
+        iyz="2.6004E-06"
+        izz="2.5312E-05" />
     </inertial>
     <visual>
       <origin
@@ -371,7 +371,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_6_1.STL" />
+          filename="package://ERA/meshes/link_6_1.STL" />
       </geometry>
       <material
         name="">
@@ -385,7 +385,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_6_1.STL" />
+          filename="package://ERA/meshes/link_6_1.STL" />
       </geometry>
     </collision>
   </link>
@@ -403,9 +403,9 @@
       xyz="0 0 -1" />
     <limit
       lower="0"
-      upper="0.05"
-      effort="0.1"
-      velocity="0.05" />
+      upper="0.32"
+      effort="218.75"
+      velocity="0.016" />
     <dynamics
       damping="0"
       friction="0" />
@@ -414,17 +414,17 @@
     name="link_6_2">
     <inertial>
       <origin
-        xyz="4.2571882107878E-06 -0.0288002672673087 0.0137283291343639"
+        xyz="4.2572E-06 -0.0288 0.013728"
         rpy="0 0 0" />
       <mass
-        value="0.0194236693750671" />
+        value="0.019424" />
       <inertia
-        ixx="1.60362265953448E-05"
-        ixy="-5.76686459490352E-10"
-        ixz="2.14097697080715E-09"
-        iyy="1.19054975416317E-05"
-        iyz="2.59981373298728E-06"
-        izz="2.54039078079099E-05" />
+        ixx="1.6036E-05"
+        ixy="-5.7669E-10"
+        ixz="2.141E-09"
+        iyy="1.1905E-05"
+        iyz="2.5998E-06"
+        izz="2.5404E-05" />
     </inertial>
     <visual>
       <origin
@@ -432,7 +432,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_6_2.STL" />
+          filename="package://ERA/meshes/link_6_2.STL" />
       </geometry>
       <material
         name="">
@@ -446,7 +446,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Robot_ERA/meshes/link_6_2.STL" />
+          filename="package://ERA/meshes/link_6_2.STL" />
       </geometry>
     </collision>
   </link>
@@ -465,7 +465,7 @@
     <limit
       lower="0"
       upper="0.05"
-      effort="0.1"
-      velocity="0.05" />
+      effort="218.75"
+      velocity="0.016" />
   </joint>
 </robot>
