@@ -1,4 +1,4 @@
-function X = olhsdesign(N, p)
+function X = olhsdesign(p,N)
 % OLHSDESIGN_MEX Genera un diseño de hipercubo latino ortogonal.
 %
 %   X = olhsdesign_mex(N, p) genera una matriz X de tamaño (N x p), donde
@@ -20,16 +20,16 @@ if mod(s, 1) ~= 0
     error('N debe ser un cuadrado perfecto.');
 end
 
-% Inicializar la matriz de salida (N muestras, p dimensiones)
-X = zeros(N, p);
+% Inicializar la matriz de salida (p dimensiones, N muestras)
+X = zeros(p, N);
 
 % Para cada dimensión j:
-for j = 1:p
+for i = 1:p
     % Se dividen [0,1] en s intervalos. Los centros de estos intervalos son:
-    centers = ((1:s)' - 0.5) / s;
+    centers = ((1:s) - 0.5) / s;
     % Replicar cada centro s veces (para obtener N = s*s valores)
-    col = repmat(centers, s, 1);
+    col = repmat(centers, 1, s);
     % Aplicar una permutación aleatoria a la columna
-    X(:, j) = col(randperm(N));
+    X(i,:) = col(randperm(N));
 end
 end
