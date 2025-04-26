@@ -83,3 +83,5 @@ dist/
 *.nav
 *.snm
 *.vrb
+src/matlab/cinematica/cinematica_dir_completo.m
+test/pruebaCinematicaDirecta.m
