@@ -88,5 +88,6 @@ log/
 
 # Otros
 src/matlab/cinematica/cinematica_dir_completo.m
+src/matlab/cinematica/cinematica_inv_completo.mlx
 test/pruebaCinematicaDirecta.m
 era_robot/
