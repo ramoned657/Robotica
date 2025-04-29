@@ -84,4 +84,4 @@ dist/
 *.snm
 *.vrb
 src/matlab/cinematica/cinematica_dir_completo.m
-test/pruebaCinematicaDirecta.m
+src/matlab/cinematica/cinematica_inv_completo.mlx
