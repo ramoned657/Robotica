@@ -180,7 +180,7 @@ Ahora se debe modificar el URDF para que se pueda simular en gazebo. Lo primero 
     <inertial>
 ```
 
-Después, agreguen las etiquetas para las transmisiones antes de . Si tienen  Solo cambien joint_n y link_n con el número correspondiente
+Después, agreguen las etiquetas para las transmisiones antes de `</robot>`, que es la última etiqueta. Solo cambien joint_n y link_n con el número correspondiente. Pueden poner que los motores tienen ya la fuerza total y que la transmisión solo tiene una reducción mecánica de 1, pero si quieren hacerlo más realista, pueden poner la fuerza del motor que viene en la hoja de datos y 
 
 ```xml
   <transmission name="link_n_trans">
@@ -190,7 +190,7 @@ Después, agreguen las etiquetas para las transmisiones antes de . Si tienen  So
     </joint>
     <actuator name="link_n_motor">
       <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-        <mechanicalReduction>1</mechanicalReduction>
+      <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
 ```
