@@ -1,14 +1,17 @@
+<h1>Instalación de ROS y Gazebo</h1>
+
+Para configurar ROS, puedes seguir los pasos que aparecen en la [página ofical de ROS](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html), pero aquí lo explicaré para los fines de la clase. Recuerda observar bien si aparece un error.
+
+<h2>Índice</h2>
+
 <- Para instalar Ubuntu, regresa a la [Instalación de Ubuntu](Instalacion-Ubuntu-WSL.md).
-- [Instalación de ROS y Gazebo](#instalación-de-ros-y-gazebo)
-  - [Actualiza los paquetes actuales](#actualiza-los-paquetes-actuales)
-  - [Habilita los repositorios requeridos](#habilita-los-repositorios-requeridos)
-  - [Instala ROS 2 y Gazebo](#instala-ros-2-y-gazebo)
-  - [Configura el entorno de ROS 2](#configura-el-entorno-de-ros-2)
-  - [Terminado](#terminado)
+- [Actualiza los paquetes actuales](#actualiza-los-paquetes-actuales)
+- [Habilita los repositorios requeridos](#habilita-los-repositorios-requeridos)
+- [Instala ROS 2 y Gazebo](#instala-ros-2-y-gazebo)
+- [Configura el entorno de ROS 2](#configura-el-entorno-de-ros-2)
+- [Terminado](#terminado)
 
 -> Para instalar MoveIt 2, ve a [Instalación de MoveIt 2](Instalacion-MoveIt.md).
-# Instalación de ROS y Gazebo
-Para configurar ROS, puedes seguir los pasos que aparecen en la [página ofical de ROS](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html), pero aquí lo explicaré para los fines de la clase. Recuerda observar bien si aparece un error.
 
 ## Actualiza los paquetes actuales
 
