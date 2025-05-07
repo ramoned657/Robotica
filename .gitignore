@@ -24,6 +24,8 @@ build/
 dist/
 install/
 log/
+devel/
+.catkin_tools/
 
 # Configuración de Visual Studio Code
 .vscode/

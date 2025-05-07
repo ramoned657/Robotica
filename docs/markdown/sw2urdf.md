@@ -2,7 +2,7 @@
 
 <h2>Índice</h2>
 
-<- Para instalar MoveIt, regresa a [instalar moveIt](Instalacion-MoveIt.md).
+<- Para instalar ROS, ve a [Instalación de ROS y Gazebo](Instalacion-Ros.md).
 
 - [Preparación del robot en SolidWorks](#preparación-del-robot-en-solidworks)
   - [SolidWorks: Eje Z vertical](#solidworks-eje-z-vertical)
@@ -19,7 +19,7 @@
   - [Previsualizar y exportar URDF](#previsualizar-y-exportar-urdf)
 - [Comprobar el URDF](#comprobar-el-urdf)
 
--> Para convertir el URDF de ROS 1 a ROS 2, ve a [Convertir URDF a ROS](Convertir_URDF_a_ROS_2.md).
+-> Para el siguiente paso, ve a [Convertir URDF a ROS](Convertir_URDF_a_ROS_2.md).
 
 # Preparación del robot en SolidWorks
 
