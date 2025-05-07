@@ -19,7 +19,7 @@
   - [Previsualizar y exportar URDF](#previsualizar-y-exportar-urdf)
 - [Comprobar el URDF](#comprobar-el-urdf)
 
--> Para el siguiente paso, ve a [Convertir URDF a ROS](Convertir_URDF_a_ROS_2.md).
+-> Para el siguiente paso, ve a [Convertir URDF a ROS](Convertir_URDF_a_ROS.md).
 
 # Preparación del robot en SolidWorks
 
