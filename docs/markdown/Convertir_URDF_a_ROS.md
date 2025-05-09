@@ -128,7 +128,7 @@ Deben cambiarlo a esto. Recuerden cambiar `MI_ROBOT` por el de su paquete.
 ```cmake
 cmake_minimum_required(VERSION 2.8.3)
 
-project(era_description)
+project(MI_ROBOT)
 
 find_package(catkin REQUIRED COMPONENTS
 	message_generation
@@ -166,7 +166,7 @@ También tienen que cambiar el archivo `package.xml`. Cambien donde dice `MI_ROB
   <description>
     <p>URDF Description package for MI_ROBOT</p>
     <p>This package contains configuration data, 3D models and launch files
-for era_description robot</p>
+for MI_ROBOT robot</p>
   </description>
   <author>TODO</author>
   <maintainer email="TODO@email.com" />
