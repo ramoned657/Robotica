@@ -407,9 +407,6 @@ Y lo tendrían que añadir después del último `</joint>` por ejemplo.
   </joint>
 ```
 
-
-
-
 ### Transmisión
 La etiqueta de transmisión es necesaria para usar `ros_control`, pero permite simular una caja de engranajes o un reductor de velocidad.
 
@@ -513,7 +510,7 @@ hand_ee_controller:
 
 ```
 
-
+También lo siguiente para que se publique la información continuamente.
 
 ```yaml
 # Controlador que publica continuamente los estados/posiciones de las articulaciones. 
@@ -522,8 +519,6 @@ joint_state_controller:
   publish_rate: 50  # Frecuencia en Hz
 ```
 
-
-
 ## MoveIt Setup Assistant
 
-Un tutorial más completo viene en la [página oficial](https://moveit.github.io/moveit_tutorials/doc/setup_assistant/setup_assistant_tutorial.html) y es el que recomiendo que sigan, pero 
+Un tutorial más completo viene en la [página oficial](https://moveit.github.io/moveit_tutorials/doc/setup_assistant/setup_assistant_tutorial.html) y es el que recomiendo que sigan, pero igual pueden ver [el PDF](https://github.com/ageofrobotics/import_your_custom_urdf_package_to_ROS-main/blob/2e713d1acf99981a315667f32bbb82ab184ffcfe/Importing_URDF_Package_from_Soloidworks_in_ROS.pdf) que hizo AgeofRobotics o su video que aparece en el PDF.
