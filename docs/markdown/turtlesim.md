@@ -84,7 +84,8 @@ Crea un paquete (si no lo tienes):
 cd ~/Robotica/src
 catkin_create_pkg turtle_control rospy geometry_msgs
 cd ~/Robotica
-catkin_make && source devel/setup.bash
+catkin build
+sb
 ```
 
 Dentro de `~/Robotica/src/turtle_control/scripts/`, crea `move_turtle.py`:
@@ -148,8 +149,10 @@ Hazlo ejecutable y pruébalo en paralelo con `turtlesim_node`.
 
 ---
 
-## 7. Ejercicio integrado
+## 7. Ejercicio integrado (documenta el proceso con capturas de pantalla y un documento)
 
 1. Modifica `move_turtle.py` para que durante 10 s la tortuga avance, luego gire en sitio, luego pare.
 2. Publica velocidades variables (usa `rospy.get_time()` para controlar fases).
 3. Observa la salida de `read_pose.py` para verificar que la tortuga se mueve donde esperas.
+4. Lee los servicios activos con `rosservice list` e invoca otra tortuga usando `rosservice call /spawn` y el tabulador. Recuerda cambiar el nombre de la tortuga y su posición inicial.
+5. Haz que las dos tortugas se muevan y graba un video.
