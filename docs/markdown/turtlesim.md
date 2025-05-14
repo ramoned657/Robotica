@@ -151,8 +151,9 @@ Hazlo ejecutable y pruébalo en paralelo con `turtlesim_node`.
 
 ## 7. Ejercicio integrado (documenta el proceso con capturas de pantalla y un documento)
 
-1. Modifica `move_turtle.py` para que durante 10 s la tortuga avance, luego gire en sitio, luego pare.
+1. Modifica `move_turtle.py` para que durante 2 s la tortuga avance y luego gire.
 2. Publica velocidades variables (usa `rospy.get_time()` para controlar fases).
 3. Observa la salida de `read_pose.py` para verificar que la tortuga se mueve donde esperas.
 4. Lee los servicios activos con `rosservice list` e invoca otra tortuga usando `rosservice call /spawn` y el tabulador. Recuerda cambiar el nombre de la tortuga y su posición inicial.
-5. Haz que las dos tortugas se muevan y graba un video.
+5. Haz que se muevan en bucle
+6. Haz que las dos tortugas se muevan y graba un video de 10 segundos.
