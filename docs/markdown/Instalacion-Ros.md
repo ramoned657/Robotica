@@ -59,6 +59,7 @@ ros-noetic-gmapping \
 ros-noetic-navigation \
 ros-noetic-interactive-markers \
 ros-noetic-moveit-setup-assistant \
+sudo apt install python3-catkin-tools \
 gedit
 ```
 
