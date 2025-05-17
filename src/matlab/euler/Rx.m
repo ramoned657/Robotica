@@ -1,3 +1,4 @@
+
 function R = Rx(phi)
 % Rx realiza una rotación en un ángulo theta en radianes con respecto al eje X.
 R = [1 0 0
