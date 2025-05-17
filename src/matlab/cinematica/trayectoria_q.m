@@ -1,3 +1,4 @@
+
 function [q, dq, ddq] = trayectoria_q(robot, t, periodo)
 %TRAYECTORIA_Q Calcula la trayectoria cíclica, velocidad y aceleración de las articulaciones.
 %

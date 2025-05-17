@@ -36,23 +36,17 @@ dJw = Jw;
 dt = 0.05;
 
 for k = 1:length(t)
-
-    pos(:,k) = robot.T(1:3,4,end);
-    R(:,:,k) = robot.T(1:3,1:3,end);
-
-    ori(:,k) = rotMat2euler(R(:, :, k),secuencia);
-
-    [Jv(:,:,k),Jw(:,:,k)] = jac_geometrico(robot);
-    
-    v_l(:,k)  = Jv(:,:,k)*dq(:,k);
-    v_r(:,k) = Jw(:,:,k)*dq(:,k);
-
-    if k > 1
+     robot = actualizar_robot(robot, q(:,k));
+     pos(:,k) = robot.T(1:3,4,end);
+     R(:,:,k) = robot.T(1:3,1:3,end);
+     ori(:,k) = rotMat2euler(R(:, :, k),secuencia);
+     [Jv(:,:,k),Jw(:,:,k)] = jac_geometrico(robot);
+      v_l(:,k)  = Jv(:,:,k) * dq(:,k); 
+      v_r(:,k) = Jw(:,:,k) * dq(:,k);  
+       if k > 1
         dJv(:,:,k) = (Jv(:,:,k) - Jv(:,:,k-1)) / dt;
         dJw(:,:,k) = (Jw(:,:,k) - Jw(:,:,k-1)) / dt;
-    end
-
-    a_l(:,k) = Jv(:,:,k)*ddq(:,k) + dJv(:,:,k)*dq(:,k);
-    a_r(:,k) = Jw(:,:,k)*ddq(:,k) + dJw(:,:,k)*dq(:,k);
-
+       end
+   a_l(:,k)  = Jv(:,:,k) * ddq(:,k) + dJv(:,:,k) * dq(:,k); 
+   a_r(:,k) = Jw(:,:,k) * ddq(:,k) + dJw(:,:,k) * dq(:,k);
 end
