@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robotchino
+    relative_path: urdf/robotchino.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/robotchino.srdf
+  CONFIG:
+    author_name: ramon
+    author_email: raymond.fd.657@gmail.com
+    generated_timestamp: 1748284783

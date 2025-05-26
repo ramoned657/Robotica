@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="robotchino">
+    <link name="world" />
+    <joint name="base_joint" type="fixed">
+        <parent link="world" />
+        <child link="Base" />
+        <origin rpy="0 0 0" xyz="0.0 0.0 0.17" />
+    </joint>
+    <link name="Base">
+        <inertial>
+            <origin xyz="0.186523011030972 -0.000410493502617404 0.981927485409853" rpy="0 0 0" />
+            <mass value="32865.8713776864" />
+            <inertia ixx="64445.341848567" ixy="1.47509131992045" ixz="298.385757778139" iyy="53927.8834393432" iyz="-1.78267588723178" izz="80974.6320980694" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robotchino/meshes/Base.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robotchino/meshes/Base.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Link1">
+        <inertial>
+            <origin xyz="0.186523011030972 -0.000410493502617404 0.981927485409853" rpy="0 0 0" />
+            <mass value="32865.8713776864" />
+            <inertia ixx="64445.341848567" ixy="1.47509131992045" ixz="298.385757778139" iyy="53927.8834393432" iyz="-1.78267588723178" izz="80974.6320980694" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robotchino/meshes/Link1.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robotchino/meshes/Link1.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint1" type="revolute">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <parent link="Base" />
+        <child link="Link1" />
+        <axis xyz="0 0 1" />
+        <limit lower="-2.79" upper="2.79" effort="3001.4" velocity="1.466" />
+        <calibration rising="0" falling="0" />
+        <dynamics damping="0" friction="0" />
+    </joint>
+    <link name="Link2">
+        <inertial>
+            <origin xyz="0.412927485409852 0.128476988969022 0.000410493502614698" rpy="0 0 0" />
+            <mass value="32865.8713776864" />
+            <inertia ixx="80974.6320980694" ixy="-298.385757778139" ixz="1.7826758872318" iyy="64445.341848567" iyz="1.47509131991986" izz="53927.8834393432" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robotchino/meshes/Link2.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robotchino/meshes/Link2.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint2" type="revolute">
+        <origin xyz="0.315 0 0.569" rpy="1.5708 -1.5708 0" />
+        <parent link="Link1" />
+        <child link="Link2" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-1.22" upper="1.22" effort="4848" velocity="0.907" />
+        <calibration rising="0" falling="0" />
+        <dynamics damping="0" friction="0" />
+    </joint>
+    <link name="Link3">
+        <inertial>
+            <origin xyz="-0.128476988969026 -0.437072514590156 -0.514339506497402" rpy="0 0 0" />
+            <mass value="32865.8713776864" />
+            <inertia ixx="64445.341848567" ixy="298.385757778139" ixz="-1.47509131992289" iyy="80974.6320980694" iyz="1.78267588723171" izz="53927.8834393432" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robotchino/meshes/Link3.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robotchino/meshes/Link3.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint3" type="revolute">
+        <origin xyz="0.85 0 0.51475" rpy="0 0 -1.5708" />
+        <parent link="Link2" />
+        <child link="Link3" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-2" upper="1.3" effort="4848" velocity="0.907" />
+        <calibration rising="0" falling="0" />
+        <dynamics damping="0" friction="0" />
+    </joint>
+    <link name="Link4">
+        <inertial>
+            <origin xyz="-0.579072514590156 -0.00608950649740254 -0.128476988969026" rpy="0 0 0" />
+            <mass value="32865.8713776864" />
+            <inertia ixx="80974.6320980694" ixy="1.78267588723169" ixz="298.385757778141" iyy="53927.8834393432" iyz="-1.47509131992357" izz="64445.341848567" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robotchino/meshes/Link4.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robotchino/meshes/Link4.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint4" type="continuous">
+        <origin xyz="0 0.142 -0.50825" rpy="1.5708 0 1.5708" />
+        <parent link="Link3" />
+        <child link="Link4" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-3.1459" upper="3.1459" effort="153" velocity="4.27" />
+        <calibration rising="0" falling="0" />
+        <dynamics damping="0" friction="0" />
+    </joint>
+    <link name="Link5">
+        <inertial>
+            <origin xyz="-1.39237633768369 -0.579072514590156 -0.00608950649740284" rpy="0 0 0" />
+            <mass value="32865.8713776864" />
+            <inertia ixx="64445.341848567" ixy="298.385757778138" ixz="-1.47509131992343" iyy="80974.6320980694" iyz="1.78267588724483" izz="53927.8834393432" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robotchino/meshes/Link5.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robotchino/meshes/Link5.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint5" type="revolute">
+        <origin xyz="0 0 1.2639" rpy="1.5708 -1.5708 0" />
+        <parent link="Link4" />
+        <child link="Link5" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-2.18" upper="2.18" effort="153" velocity="3.89" />
+        <calibration rising="0" falling="0" />
+        <dynamics damping="0" friction="0" />
+    </joint>
+    <link name="Link6">
+        <inertial>
+            <origin xyz="-0.579072514590157 -0.00608950649740223 -1.56897698896903" rpy="0 0 0" />
+            <mass value="32865.8713776864" />
+            <inertia ixx="80974.6320980694" ixy="1.78267588723169" ixz="298.385757778138" iyy="53927.8834393432" iyz="-1.47509131992357" izz="64445.341848567" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robotchino/meshes/Link6.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://robotchino/meshes/Link6.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Joint6" type="continuous">
+        <origin xyz="0.1766 0 0" rpy="1.5708 0 1.5708" />
+        <parent link="Link5" />
+        <child link="Link6" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-6.2832" upper="6.2832" effort="100" velocity="3.89" />
+        <dynamics damping="0" friction="0" />
+    </joint>
+    <!-- Link del electroimán -->
+    <link name="magnet_link">
+        <!-- Inercia aproximada (ajusta masa si quieres más realismo) -->
+        <inertial>
+            <mass value="3" />
+            <!-- 0.5 kg como ejemplo -->
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001" />
+        </inertial>
+        <!-- Geometría visual -->
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.085" length="0.06" />
+            </geometry>
+            <material name="Gray">
+                <color rgba="0.3 0.3 0.3 1.0" />
+            </material>
+        </visual>
+        <!-- Geometría de colisión -->
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="0.085" length="0.06" />
+            </geometry>
+        </collision>
+    </link>
+    <!-- Joint fijo que une el imán al link_5 -->
+    <joint name="magnet_joint" type="fixed">
+        <parent link="Link6" />
+        <child link="magnet_link" />
+        <!-- Ajusta el xyz para situar el cilindro justo donde va montado -->
+        <origin xyz="0 0 0.02" rpy="0 0 0" />
+    </joint>
+    <transmission name="link_1_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="link_1_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="link_2_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="link_2_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="link_3_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="link_3_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="link_4_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint4">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="link_4_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="link_5_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint5">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="link_5_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="link_6_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="Joint6">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="link_6_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+  <gazebo>
+    <plugin 
+      name="control"
+      filename="libgazebo_ros_control.so">
+      <robotNamespace>/</robotNamespace>
+    </plugin>
+  </gazebo>
+    <gazebo reference="Link1">
+        <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="Link2">
+        <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="Link3">
+        <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="Link4">
+        <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="Link5">
+        <selfCollide>true</selfCollide>
+    </gazebo>
+    <gazebo reference="Link6">
+        <selfCollide>true</selfCollide>
+    </gazebo>
+</robot>
+
