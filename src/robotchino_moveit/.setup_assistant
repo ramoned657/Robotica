@@ -6,6 +6,6 @@ moveit_setup_assistant_config:
   SRDF:
     relative_path: config/robotchino.srdf
   CONFIG:
-    author_name: ramon
+    author_name: RAMON
     author_email: raymond.fd.657@gmail.com
-    generated_timestamp: 1748316700
+    generated_timestamp: 1748358479

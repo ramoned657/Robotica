@@ -1,12 +1,12 @@
 <package>
 
-  <name>robotchino_moveit_config</name>
+  <name>robotchino_moveit</name>
   <version>0.3.0</version>
   <description>
      An automatically generated package with all the configuration and launch files for using the robotchino with the MoveIt Motion Planning Framework
   </description>
-  <author email="raymond.fd.657@gmail.com">ramon</author>
-  <maintainer email="raymond.fd.657@gmail.com">ramon</maintainer>
+  <author email="raymond.fd.657@gmail.com">RAMON</author>
+  <maintainer email="raymond.fd.657@gmail.com">RAMON</maintainer>
 
   <license>BSD</license>
 
