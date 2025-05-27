@@ -1,4 +1,9 @@
-<launch>
-	<!-- Define MoveIt controller manager plugin -->
-	<param name="moveit_controller_manager" value="moveit_ros_control_interface::MoveItControllerManager" />
-</launch>
+
+<launch> 
+	<!-- Define the controller manager plugin to use for trajectory execution --> 
+	<param name="moveit_controller_manager" 
+		value="moveit_simple_controller_manager/MoveItSimpleControllerManager" /> 
+ 
+	<!-- loads controller list to the param server --> 
+	<rosparam file="$(find robotchino_moveit)/config/new_ros_controllers.yaml"/> 
+</launch> 	
